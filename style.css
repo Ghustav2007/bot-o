@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(202, 16, 16);
+    transition: background-color 0.5s ease;
+    padding: 30px;
+}
+
+.toggle-label{
+    width: 60px;
+    height: 30px;
+    background-color:  gray;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle-label:before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.toggle-btn:checked + .toggle-label{
+    background-color: rgb(30, 118, 201);
+}
+
+
+.toggle-btn:checked + .toggle-label:before{
+    background-color: azure;
+    transform: translateX(30px);
+}
+.toggle-btn{
+    display: none;
+}
+
+.dark-mode{
+    background-color: black;
+}
